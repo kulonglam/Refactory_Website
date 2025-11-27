@@ -1,0 +1,335 @@
+/* Global styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: #333;
+
+}
+.container{
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.navbar{
+    background-color: rgb(246, 248, 246);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.nav-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+.nav-links{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    gap: 25px;
+}
+.nav-links li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    color: black;
+    
+}
+.nav-links li a:hover{
+    color: #00bcd4;
+}
+ul li a{
+    color: white;
+    
+    
+    
+}
+/* 1. Make the section a Flex Container */
+.hero-section {
+    display: flex;
+    background-image: url("https://refactory.academy/wp-content/uploads/2025/08/0G2A8223-1536x1024.jpg");
+    min-height: 100vh;
+    align-items: center;
+    margin-top: 70px;
+    text-align: center;
+    
+    padding: 100px 20px;
+    
+}
+
+/* Optional: Spacing and button styling */
+.hero-section h1 {
+    font-size: 2.5em;
+    max-width: 800px; 
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+/* Styling the buttons/links */
+.hero-section div a {    
+    display: flex;
+    padding: 10px 20px;
+    margin: 0 10px; 
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #68125c;
+    color: white;
+}
+/* Different style for the middle button, if desired */
+.hero-section div a:nth-child(2) {    
+    background-color: #97a328;
+}
+.hero-section div a:nth-child(3) {    
+    background-color: #fafaf7;
+    color: #68125c;
+}
+
+
+.academy{
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    background-color: rgb(236, 234, 230);
+
+}
+.academy h1{
+    color: darkmagenta;
+}
+.academy h3{
+    color:  #00bcd4;
+}
+.academy p{
+    font-size: 20px;
+}
+#learn-more a{
+    display: flex;
+    background-color: rgb(204, 204, 122);
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    flex-direction: flex-start;    
+}
+#learn-more a:hover{
+    background-color: #151d64;
+}
+
+.courses {
+    padding: 60px 20px;
+    text-align: center; 
+    font-family: Arial, sans-serif;
+}
+
+/* --- Header Styling --- */
+.courses-header h3 {
+    color: #37b9cf; 
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.courses-header h1 {
+    font-size: 2.2em;
+    margin-top: 0;
+    margin-bottom: 40px;
+    color: #8d045f;
+}
+
+/* --- Flexbox Container for Cards --- */
+.course-cards-container {
+    display: flex;
+    justify-content: center; 
+    gap: 30px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+/* --- Individual Course Card Styling --- */
+.course-card {
+    flex: 300px; 
+    text-align: left;  
+    overflow: hidden; 
+}
+
+.course-card img {
+    width: 100%;
+    height: auto;
+    display: block; 
+}
+
+/* Content area styling (text and button) */
+.course-card h4,
+.course-card p,
+.course-card .learn-more-btn {
+    padding: 0 15px; 
+}
+
+.course-card h4 {
+    font-size: 1.3em;
+    color: #8d045f;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.course-card p {
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    padding-bottom: 40px; 
+}
+
+/* --- "Learn More" Button Styling --- */
+.learn-more-btn {
+    display: inline-block;
+    padding: 40px 20px;
+    background-color: #aebe34; 
+    color: #f8f7f7;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 15px; 
+    transition: 0.3s;
+}
+
+.learn-more-btn:hover {
+    background-color: #151d64;
+}
+
+
+.footer {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    background: linear-gradient(to right, rgb(59, 84, 194), rgb(110, 40, 93));
+    color: #fff; 
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Styles for the main columns */
+.logo-refactory,
+.resource,
+.get-in-touch,
+.visit {
+    margin-bottom: 20px;
+    flex: 1 1 200px; 
+    padding: 0 10px;
+}
+
+/* Specific styling for the logo/description section to allow more width */
+.logo-refactory {
+    flex: 1 1 250px; 
+}
+
+/* List styling */
+.resource li,
+.get-in-touch li {
+    margin-bottom: 10px;
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+/* Link styling */
+.footer a {
+    color: #ccc; 
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #00bcd4; 
+    text-decoration: underline;
+}
+
+/* Heading styling */
+.footer h3 {
+    font-size: 1.1em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #00bcd4; 
+}
+
+/* Social Icons styling */
+.social-icons {
+    display: flex;
+    gap: 10px; 
+    margin-top: 15px;
+}
+.social-icons a {
+    /* Make the icons visible/styled */
+    font-size: 1.5em;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #00bcd4; 
+}
+
+/* Copyright section styling */
+.copyright {
+    flex: 1 0 100%; 
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #fcfafa; 
+    font-size: 0.9em;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 20px 10px;
+    }
+     /* Take full width when stacked */
+    .logo-refactory,
+    .resource,
+    .get-in-touch,
+    .visit {
+       
+        flex: 1 1 100%; 
+        padding: 0 0 20px 0;
+        text-align: center; 
+    }
+
+    .social-icons {
+        justify-content: center; 
+    }
+}
+
+
+
+
+
+
+/* --- Responsiveness for smaller screens --- */
+@media (max-width: 900px) {
+    .course-cards-container {
+        /* On smaller screens, allow cards to wrap */
+        flex-wrap: wrap; 
+    }
+    .course-card {
+        /* Cards take full width on smaller screens */
+        flex: 1 1 90%; 
+        margin-bottom: 25px;
+    }
+}
+/* Flexbox setup for the main footer sections */
