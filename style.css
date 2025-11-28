@@ -1,335 +1,512 @@
-/* Global styles */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
+ 
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    line-height: 1.6;
-    color: #333;
-
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+  line-height: 1.6;
+  color: #333;
 }
-.container{
-    padding: 0 20px;
-    margin: 0 auto;
-    max-width: 1200px;
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 1200px;
 }
-.navbar{
-    background-color: rgb(246, 248, 246);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+/* Navbar */
+.navbar {
+  background-color: rgb(246, 248, 246);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
-.nav-wrapper{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
+.nav-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
 }
-.nav-links{
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    gap: 25px;
+.nav-links {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  gap: 25px;
 }
-.nav-links li a{
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    font-size: 20px;
-    color: black;
-    
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 18px; 
 }
-.nav-links li a:hover{
-    color: #00bcd4;
+.nav-links li a:hover {
+  color: #00bcd4;
 }
-ul li a{
-    color: white;
-    
-    
-    
-}
-/* 1. Make the section a Flex Container */
+/* Hero section */
 .hero-section {
-    display: flex;
-    background-image: url("https://refactory.academy/wp-content/uploads/2025/08/0G2A8223-1536x1024.jpg");
-    min-height: 100vh;
-    align-items: center;
-    margin-top: 70px;
-    text-align: center;
-    
-    padding: 100px 20px;
-    
+  display: flex;
+  flex-direction: column;
+  background-image: url("https://refactory.academy/wp-content/uploads/2025/08/0G2A8223-1536x1024.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  align-items: center;
+  margin-top: 70px;
+  text-align: center;
+  z-index: 1;
+  padding: 20px;
+  justify-content: space-between;
 }
-
-/* Optional: Spacing and button styling */
+.hero-text {
+  margin-bottom: 40px;
+  color: #f8f7f7;
+  margin-top: 150px;
+}
 .hero-section h1 {
-    font-size: 2.5em;
-    max-width: 800px; 
-    margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+.hero-section h3 {
+  font-size: 1.5rem;
 }
 
-.hero-section p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
+.hero-section-icons {
+  display: flex;
+  gap: 20px;
+  margin-top: 230px;
 }
-/* Styling the buttons/links */
-.hero-section div a {    
-    display: flex;
-    padding: 10px 20px;
-    margin: 0 10px; 
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    background-color: #68125c;
-    color: white;
-}
-/* Different style for the middle button, if desired */
-.hero-section div a:nth-child(2) {    
-    background-color: #97a328;
-}
-.hero-section div a:nth-child(3) {    
-    background-color: #fafaf7;
-    color: #68125c;
+/* Base styles for all call to action links */
+.hero-section-icons a {
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 12px 20px; 
+  border-radius: 8px; 
+  transition: all 0.3s ease;  
 }
 
-
-.academy{
-    display: flex;
-    flex-direction: row;
-    padding: 50px;
-    background-color: rgb(236, 234, 230);
-
+/* Call to action, Partner With Us */
+#partner a {
+  background-color: #582f75; 
+  color: white;
 }
-.academy h1{
-    color: darkmagenta;
-}
-.academy h3{
-    color:  #00bcd4;
-}
-.academy p{
-    font-size: 20px;
-}
-#learn-more a{
-    display: flex;
-    background-color: rgb(204, 204, 122);
-    padding: 10px;
-    border-radius: 5px;
-    width: 150px;
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-    flex-direction: flex-start;    
-}
-#learn-more a:hover{
-    background-color: #151d64;
+#partner a:hover {
+  background-color: white;
+  color: #6710a5;
 }
 
+/* Call to action 2, Explore Programs */
+#explore a {
+  background-color: #c9c640; 
+  color: white;
+}
+#explore a:hover {
+  background-color: white;
+  color: #6a0dad; 
+}
+
+/* Call to action 3, Hire Talent */
+#hire a {
+  background-color: white;
+  color: #6a0dad; 
+}
+#hire a:hover {
+  background-color: #003366; 
+  color: white;
+}
+
+/* Academy section */
+.academy {
+  display: flex;
+  flex-direction: row;
+  padding: 50px;
+  background-color: rgb(236, 234, 230);
+  gap: 40px; 
+  align-items: center; 
+}
+.academy > div {
+  flex: 1; 
+}
+.academy img {
+  max-width: 100%;
+  height: auto;
+}
+.academy h1 {
+  color: darkmagenta;
+  font-size: 2em;
+}
+.academy h3 {
+  color: #00bcd4;
+  font-size: 1.3em;
+  margin-bottom: 15px;
+}
+.academy p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+/* Academy section button */
+#learn-more a {
+  display: inline-flex;
+  background-color: rgb(148, 148, 59);
+  padding: 10px 15px;
+  border-radius: 5px;
+  width: auto; 
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  margin-top: 10px;
+}
+#learn-more a:hover {
+  background-color: #151d64;
+}
+
+/* Courses section  */
 .courses {
-    padding: 60px 20px;
-    text-align: center; 
-    font-family: Arial, sans-serif;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
 }
-
-/* --- Header Styling --- */
 .courses-header h3 {
-    color: #37b9cf; 
-    font-weight: 600;
-    margin-bottom: 5px;
+  color: #37b9cf;
+  font-weight: 600;
+  margin-bottom: 5px;
 }
 
 .courses-header h1 {
-    font-size: 2.2em;
-    margin-top: 0;
-    margin-bottom: 40px;
-    color: #8d045f;
+  font-size: 2.2em;
+  margin-top: 0;
+  margin-bottom: 40px;
+  color: #8d045f;
 }
 
-/* --- Flexbox Container for Cards --- */
+/* Courses card container */
 .course-cards-container {
-    display: flex;
-    justify-content: center; 
-    gap: 30px; 
-    max-width: 1200px; 
-    margin: 0 auto; 
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* --- Individual Course Card Styling --- */
+/* Individual course card styling */
 .course-card {
-    flex: 300px; 
-    text-align: left;  
-    overflow: hidden; 
+  flex: 1;
+  text-align: left;
+  overflow: hidden;
+  background-color: #fff;
 }
-
+/* Image card */
 .course-card img {
-    width: 100%;
-    height: auto;
-    display: block; 
+  width: 100%;
+  height: 250px; 
+  object-fit: cover; 
+  display: block;
 }
 
-/* Content area styling (text and button) */
+/* Content area styling  */
 .course-card h4,
-.course-card p,
-.course-card .learn-more-btn {
-    padding: 0 15px; 
+.course-card p {
+  padding: 0 15px;
 }
 
 .course-card h4 {
-    font-size: 1.3em;
-    color: #8d045f;
-    margin-top: 15px;
-    margin-bottom: 10px;
+  font-size: 1.3em;
+  color: #8d045f;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 .course-card p {
-    color: #555;
-    line-height: 1.5;
-    margin-bottom: 20px;
-    padding-bottom: 40px; 
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
-/* --- "Learn More" Button Styling --- */
+/* Learn More button */
 .learn-more-btn {
-    display: inline-block;
-    padding: 40px 20px;
-    background-color: #aebe34; 
-    color: #f8f7f7;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    margin: 15px; 
-    transition: 0.3s;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #aebe34;
+  color: #f8f7f7;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 0 15px 20px 15px;
+  transition: 0.3s;
 }
 
 .learn-more-btn:hover {
-    background-color: #151d64;
+  background-color: #151d64;
+}
+
+/* Dropdown positioning */
+.nav-links li {
+    position: relative; 
+}
+.nav-links li a {
+    display: block;
+    padding: 5px 0; 
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+  display: none; 
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  color: #0f0000;
+  background-color: #f6f8f6; 
+  min-width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 5px 0;
+  list-style: none;
+  z-index: 1001;
+}
+.dropdown-menu li {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.dropdown-menu li a {
+  padding: 10px 15px;
+  white-space: nowrap;
+  color: #0f0000;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #e6f2f3; 
+  color: #24c1d3fa;
+}
+
+/* Show the dropdown on hover */
+.nav-links li:hover > .dropdown-menu {
+  display: block;
 }
 
 
+
+/* Footer styling */
 .footer {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-between; 
-    align-items: flex-start; 
-    background: linear-gradient(to right, rgb(59, 84, 194), rgb(110, 40, 93));
-    color: #fff; 
-    padding: 40px 20px;
-    font-family: Arial, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: linear-gradient(to right, rgb(59, 84, 194), rgb(110, 40, 93));
+  color: #fff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+.footer img {
+  filter: brightness(0) invert(1); 
 }
 
-/* Styles for the main columns */
+/* Styles for the main columns footer */
 .logo-refactory,
 .resource,
 .get-in-touch,
 .visit {
-    margin-bottom: 20px;
-    flex: 1 1 200px; 
-    padding: 0 10px;
+  margin-bottom: 20px;
+  flex: 1 1 200px;
+  padding: 0 10px;
 }
 
-/* Specific styling for the logo/description section to allow more width */
+/* Specific styling for the footer logo */
 .logo-refactory {
-    flex: 1 1 250px; 
+  flex: 1 1 250px;
 }
 
 /* List styling */
 .resource li,
 .get-in-touch li {
-    margin-bottom: 10px;
-    list-style: none; 
-    padding: 0;
-    margin: 0;
+  margin-bottom: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-
+.get-in-touch li i {
+    margin-right: 8px;
+    color: #58bbf5;
+    width: 16px; 
+    text-align: center;
+}
 /* Link styling */
 .footer a {
-    color: #ccc; 
-    text-decoration: none;
+  color: #ccc;
+  text-decoration: none;
 }
 
 .footer a:hover {
-    color: #00bcd4; 
-    text-decoration: underline;
+  color: #00bcd4;
+  text-decoration: underline;
 }
 
 /* Heading styling */
 .footer h3 {
-    font-size: 1.1em;
-    margin-top: 0;
-    margin-bottom: 15px;
-    color: #00bcd4; 
+  font-size: 1.1em;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #00bcd4;
 }
 
 /* Social Icons styling */
 .social-icons {
-    display: flex;
-    gap: 10px; 
-    margin-top: 15px;
+  display: flex;
+  gap: 15px; 
+  margin-top: 15px;
 }
 .social-icons a {
-    /* Make the icons visible/styled */
-    font-size: 1.5em;
-    color: #ccc;
-    transition: color 0.3s;
+  font-size: 1.5em;
+  color: #ccc;
+  transition: color 0.3s;
 }
 
 .social-icons a:hover {
-    color: #00bcd4; 
+  color: #00bcd4;
 }
 
 /* Copyright section styling */
 .copyright {
-    flex: 1 0 100%; 
-    text-align: center;
-    padding-top: 20px;
-    margin-top: 20px;
-    border-top: 1px solid #fcfafa; 
-    font-size: 0.9em;
+  flex: 1 0 100%;
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid rgba(250, 247, 247, 0.925); 
+  font-size: 0.9em;
 }
 
-/* Media query for smaller screens */
+/* Responsive style to small screen */
 @media (max-width: 768px) {
-    .footer {
-        flex-direction: column; 
-        align-items: center; 
-        padding: 20px 10px;
-    }
-     /* Take full width when stacked */
-    .logo-refactory,
-    .resource,
-    .get-in-touch,
-    .visit {
-       
-        flex: 1 1 100%; 
-        padding: 0 0 20px 0;
-        text-align: center; 
-    }
+  .nav-wrapper {
+    flex-wrap: wrap;
+    padding: 10px 20px;
+  }
 
-    .social-icons {
-        justify-content: center; 
-    }
+  .nav-links {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0;
+    gap: 0;
+  }
+
+  .nav-links li {
+    padding: 8px 0;
+    width: 100%;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  /* Hero Section Adjustments */
+  .hero-section {
+    margin-top: 50px;
+    padding: 60px 15px;
+    text-align: center;
+  }
+
+  .hero-text {
+    margin-top: 100px;
+    margin-bottom: 30px;
+  }
+  
+  .hero-section h1 {
+      font-size: 2em;
+  }
+  .hero-section h3 {
+      font-size: 1.2em;
+  }
+
+  .hero-section-icons {
+    flex-direction: column;
+    gap: 15px;
+    width: 90%; 
+    margin-top: 50px;
+    align-items: center;
+  }
+
+  .hero-section-icons a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Academy Section Adjustments */
+  .academy {
+    flex-direction: column;
+    padding: 30px 15px;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .academy > div {
+      margin-bottom: 10px;
+  }
+  
+  .academy img {
+      order: -1; 
+  }
+  
+  #learn-more {
+      text-align: center;
+  }
+  
+  #learn-more a {
+    margin: 15px auto 0;
+  }
+
+  /* Course Cards Adjustments */
+  .course-cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .course-card {
+    max-width: 95%; 
+    margin: 0 auto;
+  }
+  
+  /* Footer Adjustments */
+  .footer {
+    text-align: center;
+    padding: 30px 15px;
+  }
+
+  .logo-refactory,
+  .resource,
+  .get-in-touch,
+  .visit {
+    flex: 1 1 100%;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  
+  .social-icons {
+      justify-content: center;
+  }
 }
 
+/* For tiny screen (480px) */
 
+@media (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 1.6em;
+  }
 
-
-
-
-/* --- Responsiveness for smaller screens --- */
-@media (max-width: 900px) {
-    .course-cards-container {
-        /* On smaller screens, allow cards to wrap */
-        flex-wrap: wrap; 
-    }
-    .course-card {
-        /* Cards take full width on smaller screens */
-        flex: 1 1 90%; 
-        margin-bottom: 25px;
-    }
+  .hero-section h3 {
+    font-size: 1em;
+  }
 }
-/* Flexbox setup for the main footer sections */
