@@ -292,9 +292,36 @@ body {
   display: block;
 }
 
+/* Style the anchor tag as the circle container */
+.nav-search a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px; 
+  height: 40px;
+  border-radius: 50%; 
+  background-color: rgb(176, 201, 69);  
+  transition: all 0.3s ease;
+  padding-left: 0; 
+}
 
+/* Base style for the icon itself */
+.nav-search .search-icon {
+  color: #fff; 
+  font-size: 18px; 
+  padding: 0; 
+  transition: color 0.3s;
+}
 
-/* Footer styling */
+/* Hover effect: Fill the circle with orange */
+.nav-search a:hover {
+  background-color: #5e6df5; 
+}
+.nav-search a:hover .search-icon {
+  color: white; 
+}
+
+/* Footer section */
 .footer {
   display: flex;
   flex-wrap: wrap;
